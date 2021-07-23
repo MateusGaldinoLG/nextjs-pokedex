@@ -1,3 +1,10 @@
+# Nextjs (gen) Pokedex
+
+Projeto de pesquisa de Pokemon usando a PokeAPI no estilo de uma Pokedex. Utilizando Next.js com Typescript e Tailwindcss.  
+Esse projeto foi feito sozinho, somente com a ajuda de tutoriais de arquitetura de React.js, então alguns componentes ou estilos de código podem não estar 100% alinhados à visão do ecossistema.
+
+----------
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
