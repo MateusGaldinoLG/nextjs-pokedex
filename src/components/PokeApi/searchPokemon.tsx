@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { api } from "../../util/axiosRequests/GetPokemons";
+import NotFound from "../errors/NotFound";
 import PokemonCard from "./PokemonCard";
 
 export default function SearchPokemon(){
@@ -19,8 +20,8 @@ export default function SearchPokemon(){
                 setIsWrong(false);
             })
             .catch((err: any) => {
-                console.log(err)
-                setIsWrong(true);
+                console.log(err);
+                setIsWrong(true);      
             })
     }
 
@@ -31,16 +32,17 @@ export default function SearchPokemon(){
 
     return(
         <div>
-            <div className="flex flex-column items-center justify-center">
+            <div className="flex flex-column items-center justify-center mb-4">
                 <input
                     type="text"
                     value={input}
                     onChange={handleInput}
-                    className="border-blue-500 border-b-2"
+                    className="border-blue-500 border-b-2 focus:outline-none focus:ring-red-500 focus:border-red-300"
                 />
                 <button className="p-2 mx-2 bg-blue-500 hover:bg-blue-400 hover:text-gray-900 border-1 rounded-md" onClick={searchInput}>Search</button>
             </div>
             {(show && !isWrong) ? <PokemonCard pokemonData={pokemon} /> : <div>...</div>}
+            {(isWrong) ? <NotFound name={input} /> : <div>...</div>}
         </div>
     )
 }

@@ -9,7 +9,7 @@ export default function Nav(){
             <div>
                 <ul className="flex md:flex-row flex-col space-x-3">
                     <li className="text-2xl"><a href="#" className="hover:underline">Pokemons</a></li>
-                    <li className="text-2xl"><a href="#" className="hover:underline">Generations</a></li>
+                    <li className="text-2xl"><Link href="/generations"><a className="hover:underline">Generations</a></Link></li>
                     <li className="text-2xl"><Link href="/search"><a className="hover:underline">Search</a></Link></li>
                 </ul>
             </div>
