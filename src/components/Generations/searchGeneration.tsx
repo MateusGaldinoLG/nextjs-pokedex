@@ -39,7 +39,7 @@ export default function SearchGeneration(){
             </div>
             {generation ? <div>
                 <GenerationDetails generation={generation} />
-                <SearchApiGeneration generationNumber={generation[0].id} generationStartNumber={generation[0].pokemonNumbers - generation[0].uniquePokemon} generationUniquePokemon={generation[0].pokemonNumbers} />
+                <SearchApiGeneration generationNumber={parseInt(generation[0].id)} />
             </div> : <div>...</div>}
             
         </div>
